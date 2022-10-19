@@ -244,7 +244,7 @@ static double edgeToEdgeDistance(const EdgeSegment &a, const EdgeSegment &b, int
 }
 
 static double splineToSplineDistance(EdgeSegment * const *edgeSegments, int aStart, int aEnd, int bStart, int bEnd, int precision) {
-    double minDistance = fabs(SignedDistance::INFINITE.distance);
+    double minDistance = fabs(SignedDistance::INFINITEVAR.distance);
     for (int ai = aStart; ai < aEnd; ++ai)
         for (int bi = bStart; bi < bEnd && minDistance; ++bi) {
             double d = edgeToEdgeDistance(*edgeSegments[ai], *edgeSegments[bi], precision);
