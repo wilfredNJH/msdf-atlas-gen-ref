@@ -2,7 +2,7 @@ project "msdf-atlas-gen"
 	kind "StaticLib"
 	language "C++"
 	cppdialect "C++17"
-    staticruntime "on"
+    staticruntime "off"
 	systemversion "latest"
 	warnings "off"
 
@@ -25,6 +25,8 @@ project "msdf-atlas-gen"
 		"msdfgen/lib/**.cpp",
 		"msdfgen/include/**.h"
 	}
+
+	flags { "MultiProcessorCompile" }
 
 	includedirs
 	{
